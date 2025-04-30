@@ -1,0 +1,27 @@
+.tenant-form-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.document-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.document-links a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.document-links a:hover {
+    text-decoration: underline;
+}

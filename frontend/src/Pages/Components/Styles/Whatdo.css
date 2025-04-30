@@ -1,0 +1,129 @@
+.whatdo-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #FFFFFF;
+}
+
+.whatdo-title {
+  text-align: center;
+  margin: 40px 0;
+  color: #C61300;
+  font-size: 2.5rem;
+  font-weight: bold;
+  position: relative;
+}
+
+.whatdo-description {
+  text-align: center;
+  margin-bottom: 50px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+.whatdo-steps {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 30px;
+}
+
+.whatdo-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  padding: 20px;
+  background: #FFFFFF;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 20px rgba(198, 19, 0, 0.1);
+}
+
+.whatdo-step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(198, 19, 0, 0.15);
+}
+
+.whatdo-step-icon {
+  width: 150px;
+  height: 150px;
+  background-color: #fff;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(198, 19, 0, 0.1);
+}
+
+.whatdo-step-icon svg {
+  width: 70px;
+  height: 70px;
+  color: #C61300;
+}
+
+.whatdo-step-title {
+  color: #C61300;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.whatdo-step-description {
+  text-align: center;
+  font-size: 1rem;
+  color: #333;
+}
+
+@media (max-width: 992px) {
+  .whatdo-steps {
+    gap: 30px;
+  }
+
+  .whatdo-step {
+    width: 200px;
+  }
+
+  .whatdo-step-icon {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+@media (max-width: 768px) {
+  .whatdo-steps {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .whatdo-step {
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .whatdo-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .whatdo-title {
+    font-size: 1.75rem;
+  }
+
+  .whatdo-step-title {
+    font-size: 1.25rem;
+  }
+
+  .whatdo-description {
+    font-size: 1rem;
+  }
+}

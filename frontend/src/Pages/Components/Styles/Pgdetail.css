@@ -1,0 +1,2584 @@
+:root {
+    --primary-red: #e63946;
+    --secondary-red: #d62c3a;
+    --white: #ffffff;
+    --light-gray: #f8f9fa;
+    --dark-gray: #343a40;
+    --text-gray: #6c757d;
+    --border-radius: 12px;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+.pg-details-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.pg-details-header {
+    background: linear-gradient(135deg, var(--pgdetail-primary), var(--pgdetail-secondary));
+    color: var(--pgdetail-white);
+    padding: 2rem;
+    border-radius: var(--pgdetail-border-radius);
+    margin-bottom: 2rem;
+}
+
+.header-content {
+    text-align: center;
+}
+
+.header-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.pg-type-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 500;
+    margin: 0.5rem 0;
+}
+
+.pg-location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.pg-content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.image-gallery-section {
+    background: var(--pgdetail-white);
+    border-radius: var(--pgdetail-border-radius);
+    overflow: hidden;
+    box-shadow: var(--pgdetail-shadow-medium);
+}
+
+.main-image {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.main-image img:hover {
+    transform: scale(1.02);
+}
+
+.thumbnail-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+
+.thumbnail {
+    height: 100px;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.thumbnail:hover {
+    opacity: 0.9;
+}
+
+.image-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90vh;
+}
+
+.modal-image {
+    max-width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+    cursor: default;
+}
+
+.close-button {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.main-image {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.main-image:hover {
+    opacity: 0.9;
+}
+
+.info-card {
+    background: var(--pgdetail-white);
+    border-radius: var(--pgdetail-border-radius);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--pgdetail-shadow-small);
+}
+
+.info-card h2 {
+    font-size: 1.5rem;
+    color: var(--pgdetail-dark-text);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--pgdetail-light-bg);
+}
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.facility-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--pgdetail-light-bg);
+    border-radius: var(--pgdetail-border-radius);
+    transition: var(--pgdetail-transition);
+}
+
+.facility-item i {
+    font-size: 1.5rem;
+    color: var(--pgdetail-primary);
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--pgdetail-transition);
+}
+
+.facility-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--pgdetail-shadow-small);
+    background: var(--pgdetail-primary);
+    color: var(--pgdetail-white);
+}
+
+.facility-item:hover i {
+    color: var(--pgdetail-white);
+}
+
+.facility-name {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.video-container {
+    position: relative;
+    padding-top: 56.25%;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sidebar {
+    position: sticky;
+    top: 2rem;
+    align-self: start;
+}
+
+.booking-card {
+    background: var(--pgdetail-white);
+    border-radius: var(--pgdetail-border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--pgdetail-shadow-large);
+    margin-bottom: 1.5rem;
+}
+
+.price-section {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.price-amount {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--pgdetail-primary);
+}
+
+.price-period {
+    color: var(--pgdetail-muted-text);
+    font-size: 1.1rem;
+}
+
+.book-now-button {
+    width: 100%;
+    background: var(--pgdetail-primary);
+    color: var(--pgdetail-white);
+    border: none;
+    padding: 1rem;
+    border-radius: var(--pgdetail-border-radius);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--pgdetail-transition);
+}
+
+.book-now-button:hover {
+    background: var(--pgdetail-secondary);
+    transform: translateY(-2px);
+    box-shadow: var(--pgdetail-shadow-medium);
+}
+
+.quick-info {
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--light-gray);
+    padding-top: 1.5rem;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.info-label {
+    color: var(--text-gray);
+}
+
+.info-value {
+    font-weight: 500;
+    color: var(--dark-gray);
+}
+
+.contact-card {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-md);
+}
+
+.contact-info {
+    margin-top: 1rem;
+}
+
+.contact-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.contact-item:last-child {
+    border-bottom: none;
+}
+
+.contact-value {
+    color: var(--primary-red);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-value:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+    .pg-content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: static;
+    }
+}
+
+@media (max-width: 768px) {
+    .pg-details-container {
+        padding: 1rem;
+    }
+
+    .header-content h1 {
+        font-size: 2rem;
+    }
+
+    .main-image {
+        height: 300px;
+    }
+
+    .thumbnail-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .thumbnail {
+        height: 120px;
+    }
+
+    .facilities-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .pg-type-badge {
+        font-size: 0.9rem;
+    }
+
+    .price-amount {
+        font-size: 2rem;
+    }
+
+    .facility-item {
+        padding: 0.5rem;
+        gap: 0.5rem;
+    }
+
+    .facility-item i {
+        font-size: 1.1rem;
+        width: 18px;
+        height: 18px;
+    }
+
+    .facility-name {
+        font-size: 0.85rem;
+    }
+}
+
+.pg-details-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.pg-details-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 15px;
+}
+
+.pg-details-header h1 {
+    font-size: 2.5rem;
+    color: #2d3436;
+    margin-bottom: 1rem;
+}
+
+.pg-type-badge {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background: #e63946;
+    color: white;
+    border-radius: 25px;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+
+.pg-location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.pg-images-section {
+    margin-bottom: 3rem;
+}
+
+.main-image-container {
+    margin-bottom: 1.5rem;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+.pg-main-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.pg-main-image:hover {
+    transform: scale(1.02);
+}
+
+.additional-images-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.additional-image-container {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.additional-image-container img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.additional-image-container img:hover {
+    transform: scale(1.05);
+}
+
+.pricing-block {
+    text-align: center;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+}
+
+.price-container {
+    margin: 1.5rem 0;
+}
+
+.price-amount {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #e63946;
+}
+
+.price-period {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.book-now-button {
+    background: #e63946;
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.book-now-button:hover {
+    background: #dc2f3d;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
+}
+
+.property-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.highlight-item {
+    text-align: center;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.highlight-label {
+    display: block;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.highlight-value {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2d3436;
+}
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.facility-card {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.facility-card:hover {
+    transform: translateY(-2px);
+    background: #e63946;
+    color: white;
+}
+
+.facility-icon {
+    color: #e63946;
+    font-weight: bold;
+}
+
+.facility-card:hover .facility-icon {
+    color: white;
+}
+
+.contact-details {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.contact-label {
+    color: #666;
+}
+
+.contact-value {
+    color: #2d3436;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.contact-value:hover {
+    color: #e63946;
+}
+
+@media (max-width: 768px) {
+    .pg-details-container {
+        padding: 1rem;
+    }
+
+    .pg-main-image {
+        height: 300px;
+    }
+
+    .price-amount {
+        font-size: 2rem;
+    }
+}
+
+:root {
+    --pgdetail-primary: #e63946;
+    --pgdetail-secondary: #d62c3a;
+    --pgdetail-white: #ffffff;
+    --pgdetail-light-bg: #f8f9fa;
+    --pgdetail-dark-text: #343a40;
+    --pgdetail-muted-text: #6c757d;
+    --pgdetail-border-radius: 12px;
+    --pgdetail-shadow-small: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --pgdetail-shadow-medium: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --pgdetail-shadow-large: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --pgdetail-transition: all 0.3s ease;
+}
+
+
+.book-now-button:hover {
+    background: #dc2f3d;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
+}
+
+.property-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.highlight-item {
+    text-align: center;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.highlight-label {
+    display: block;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.highlight-value {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2d3436;
+}
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.facility-card {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.facility-card:hover {
+    transform: translateY(-2px);
+    background: #e63946;
+    color: white;
+}
+
+.facility-icon {
+    color: #e63946;
+    font-weight: bold;
+}
+
+.facility-card:hover .facility-icon {
+    color: white;
+}
+
+.contact-details {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.contact-label {
+    color: #666;
+}
+
+.contact-value {
+    color: #2d3436;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.contact-value:hover {
+    color: #e63946;
+}
+
+@media (max-width: 768px) {
+    .pg-details-container {
+        padding: 1rem;
+    }
+
+    .pg-main-image {
+        height: 300px;
+    }
+
+    .price-amount {
+        font-size: 2rem;
+    }
+}
+
+:root {
+    --primary-red: #e63946;
+    --secondary-red: #d62c3a;
+    --white: #ffffff;
+    --light-gray: #f8f9fa;
+    --dark-gray: #343a40;
+    --text-gray: #6c757d;
+    --border-radius: 12px;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+
+.book-now-button:hover {
+    background: #dc2f3d;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
+}
+
+.property-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.highlight-item {
+    text-align: center;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.highlight-label {
+    display: block;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.highlight-value {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2d3436;
+}
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.facility-card {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.facility-card:hover {
+    transform: translateY(-2px);
+    background: #e63946;
+    color: white;
+}
+
+.facility-icon {
+    color: #e63946;
+    font-weight: bold;
+}
+
+.facility-card:hover .facility-icon {
+    color: white;
+}
+
+.contact-details {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.contact-label {
+    color: #666;
+}
+
+.contact-value {
+    color: #2d3436;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.contact-value:hover {
+    color: #e63946;
+}
+
+@media (max-width: 768px) {
+    .pg-details-container {
+        padding: 1rem;
+    }
+
+    .pg-main-image {
+        height: 300px;
+    }
+
+    .price-amount {
+        font-size: 2rem;
+    }
+}
+
+:root {
+    --primary-red: #e63946;
+    --secondary-red: #d62c3a;
+    --white: #ffffff;
+    --light-gray: #f8f9fa;
+    --dark-gray: #343a40;
+    --text-gray: #6c757d;
+    --border-radius: 12px;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+
+.book-now-button:hover {
+    background: #dc2f3d;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
+}
+
+.property-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.highlight-item {
+    text-align: center;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.highlight-label {
+    display: block;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.highlight-value {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2d3436;
+}
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.facility-card {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.facility-card:hover {
+    transform: translateY(-2px);
+    background: #e63946;
+    color: white;
+}
+
+.facility-icon {
+    color: #e63946;
+    font-weight: bold;
+}
+
+.facility-card:hover .facility-icon {
+    color: white;
+}
+
+.contact-details {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.contact-label {
+    color: #666;
+}
+
+.contact-value {
+    color: #2d3436;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.contact-value:hover {
+    color: #e63946;
+}
+
+@media (max-width: 768px) {
+    .pg-details-container {
+        padding: 1rem;
+    }
+
+    .pg-main-image {
+        height: 300px;
+    }
+
+    .price-amount {
+        font-size: 2rem;
+    }
+}
+
+:root {
+    --primary-red: #e63946;
+    --secondary-red: #d62c3a;
+    --white: #ffffff;
+    --light-gray: #f8f9fa;
+    --dark-gray: #343a40;
+    --text-gray: #6c757d;
+    --border-radius: 12px;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+
+.book-now-button:hover {
+    background: #dc2f3d;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
+}
+
+.property-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.highlight-item {
+    text-align: center;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.highlight-label {
+    display: block;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.highlight-value {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2d3436;
+}
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.facility-card {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.facility-card:hover {
+    transform: translateY(-2px);
+    background: #e63946;
+    color: white;
+}
+
+.facility-icon {
+    color: #e63946;
+    font-weight: bold;
+}
+
+.facility-card:hover .facility-icon {
+    color: white;
+}
+
+.contact-details {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.contact-label {
+    color: #666;
+}
+
+.contact-value {
+    color: #2d3436;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.contact-value:hover {
+    color: #e63946;
+}
+
+@media (max-width: 768px) {
+    .pg-details-container {
+        padding: 1rem;
+    }
+
+    .pg-main-image {
+        height: 300px;
+    }
+
+    .price-amount {
+        font-size: 2rem;
+    }
+}
+
+:root {
+    --primary-red: #e63946;
+    --secondary-red: #d62c3a;
+    --white: #ffffff;
+    --light-gray: #f8f9fa;
+    --dark-gray: #343a40;
+    --text-gray: #6c757d;
+    --border-radius: 12px;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+
+.book-now-button:hover {
+    background: #dc2f3d;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
+}
+
+.property-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.highlight-item {
+    text-align: center;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.highlight-label {
+    display: block;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.highlight-value {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2d3436;
+}
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.facility-card {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.facility-card:hover {
+    transform: translateY(-2px);
+    background: #e63946;
+    color: white;
+}
+
+.facility-icon {
+    color: #e63946;
+    font-weight: bold;
+}
+
+.facility-card:hover .facility-icon {
+    color: white;
+}
+
+.contact-details {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.contact-label {
+    color: #666;
+}
+
+.contact-value {
+    color: #2d3436;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.contact-value:hover {
+    color: #e63946;
+}
+
+@media (max-width: 768px) {
+    .pg-details-container {
+        padding: 1rem;
+    }
+
+    .pg-main-image {
+        height: 300px;
+    }
+
+    .price-amount {
+        font-size: 2rem;
+    }
+}
+
+:root {
+    --primary-red: #e63946;
+    --secondary-red: #d62c3a;
+    --white: #ffffff;
+    --light-gray: #f8f9fa;
+    --dark-gray: #343a40;
+    --text-gray: #6c757d;
+    --border-radius: 12px;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+
+.book-now-button:hover {
+    background: #dc2f3d;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
+}
+
+.property-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.highlight-item {
+    text-align: center;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.highlight-label {
+    display: block;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.highlight-value {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2d3436;
+}
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.facility-card {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.facility-card:hover {
+    transform: translateY(-2px);
+    background: #e63946;
+    color: white;
+}
+
+.facility-icon {
+    color: #e63946;
+    font-weight: bold;
+}
+
+.facility-card:hover .facility-icon {
+    color: white;
+}
+
+.contact-details {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.contact-label {
+    color: #666;
+}
+
+.contact-value {
+    color: #2d3436;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.contact-value:hover {
+    color: #e63946;
+}
+
+@media (max-width: 768px) {
+    .pg-details-container {
+        padding: 1rem;
+    }
+
+    .pg-main-image {
+        height: 300px;
+    }
+
+    .price-amount {
+        font-size: 2rem;
+    }
+}
+
+:root {
+    --primary-red: #e63946;
+    --secondary-red: #d62c3a;
+    --white: #ffffff;
+    --light-gray: #f8f9fa;
+    --dark-gray: #343a40;
+    --text-gray: #6c757d;
+    --border-radius: 12px;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+
+.book-now-button:hover {
+    background: #dc2f3d;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
+}
+
+.property-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.highlight-item {
+    text-align: center;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.highlight-label {
+    display: block;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.highlight-value {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2d3436;
+}
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.facility-card {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.facility-card:hover {
+    transform: translateY(-2px);
+    background: #e63946;
+    color: white;
+}
+
+.facility-icon {
+    color: #e63946;
+    font-weight: bold;
+}
+
+.facility-card:hover .facility-icon {
+    color: white;
+}
+
+.contact-details {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.contact-label {
+    color: #666;
+}
+
+.contact-value {
+    color: #2d3436;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.contact-value:hover {
+    color: #e63946;
+}
+
+@media (max-width: 768px) {
+    .pg-details-container {
+        padding: 1rem;
+    }
+
+    .pg-main-image {
+        height: 300px;
+    }
+
+    .price-amount {
+        font-size: 2rem;
+    }
+}
+
+:root {
+    --primary-red: #e63946;
+    --secondary-red: #d62c3a;
+    --white: #ffffff;
+    --light-gray: #f8f9fa;
+    --dark-gray: #343a40;
+    --text-gray: #6c757d;
+    --border-radius: 12px;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+
+.book-now-button:hover {
+    background: #dc2f3d;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
+}
+
+.property-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.highlight-item {
+    text-align: center;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.highlight-label {
+    display: block;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.highlight-value {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2d3436;
+}
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.facility-card {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.facility-card:hover {
+    transform: translateY(-2px);
+    background: #e63946;
+    color: white;
+}
+
+.facility-icon {
+    color: #e63946;
+    font-weight: bold;
+}
+
+.facility-card:hover .facility-icon {
+    color: white;
+}
+
+.contact-details {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.contact-label {
+    color: #666;
+}
+
+.contact-value {
+    color: #2d3436;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.contact-value:hover {
+    color: #e63946;
+}
+
+@media (max-width: 768px) {
+    .pg-details-container {
+        padding: 1rem;
+    }
+
+    .pg-main-image {
+        height: 300px;
+    }
+
+    .price-amount {
+        font-size: 2rem;
+    }
+}
+
+:root {
+    --primary-red: #e63946;
+    --secondary-red: #d62c3a;
+    --white: #ffffff;
+    --light-gray: #f8f9fa;
+    --dark-gray: #343a40;
+    --text-gray: #6c757d;
+    --border-radius: 12px;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+
+.book-now-button:hover {
+    background: #dc2f3d;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
+}
+
+.property-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.highlight-item {
+    text-align: center;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.highlight-label {
+    display: block;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.highlight-value {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2d3436;
+}
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.facility-card {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.facility-card:hover {
+    transform: translateY(-2px);
+    background: #e63946;
+    color: white;
+}
+
+.facility-icon {
+    color: #e63946;
+    font-weight: bold;
+}
+
+.facility-card:hover .facility-icon {
+    color: white;
+}
+
+.contact-details {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.contact-label {
+    color: #666;
+}
+
+.contact-value {
+    color: #2d3436;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.contact-value:hover {
+    color: #e63946;
+}
+
+@media (max-width: 768px) {
+    .pg-details-container {
+        padding: 1rem;
+    }
+
+    .pg-main-image {
+        height: 300px;
+    }
+
+    .price-amount {
+        font-size: 2rem;
+    }
+}
+
+:root {
+    --primary-red: #e63946;
+    --secondary-red: #d62c3a;
+    --white: #ffffff;
+    --light-gray: #f8f9fa;
+    --dark-gray: #343a40;
+    --text-gray: #6c757d;
+    --border-radius: 12px;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+
+.book-now-button:hover {
+    background: #dc2f3d;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
+}
+
+.property-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.highlight-item {
+    text-align: center;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.highlight-label {
+    display: block;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.highlight-value {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2d3436;
+}
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.facility-card {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.facility-card:hover {
+    transform: translateY(-2px);
+    background: #e63946;
+    color: white;
+}
+
+.facility-icon {
+    color: #e63946;
+    font-weight: bold;
+}
+
+.facility-card:hover .facility-icon {
+    color: white;
+}
+
+.contact-details {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.contact-label {
+    color: #666;
+}
+
+.contact-value {
+    color: #2d3436;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.contact-value:hover {
+    color: #e63946;
+}
+
+@media (max-width: 768px) {
+    .pg-details-container {
+        padding: 1rem;
+    }
+
+    .pg-main-image {
+        height: 300px;
+    }
+
+    .price-amount {
+        font-size: 2rem;
+    }
+}
+
+:root {
+    --primary-red: #e63946;
+    --secondary-red: #d62c3a;
+    --white: #ffffff;
+    --light-gray: #f8f9fa;
+    --dark-gray: #343a40;
+    --text-gray: #6c757d;
+    --border-radius: 12px;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+
+.book-now-button:hover {
+    background: #dc2f3d;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
+}
+
+.property-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.highlight-item {
+    text-align: center;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.highlight-label {
+    display: block;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.highlight-value {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2d3436;
+}
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.facility-card {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.facility-card:hover {
+    transform: translateY(-2px);
+    background: #e63946;
+    color: white;
+}
+
+.facility-icon {
+    color: #e63946;
+    font-weight: bold;
+}
+
+.facility-card:hover .facility-icon {
+    color: white;
+}
+
+.contact-details {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.contact-label {
+    color: #666;
+}
+
+.contact-value {
+    color: #2d3436;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.contact-value:hover {
+    color: #e63946;
+}
+
+@media (max-width: 768px) {
+    .pg-details-container {
+        padding: 1rem;
+    }
+
+    .pg-main-image {
+        height: 300px;
+    }
+
+    .price-amount {
+        font-size: 2rem;
+    }
+}
+
+:root {
+    --primary-red: #e63946;
+    --secondary-red: #d62c3a;
+    --white: #ffffff;
+    --light-gray: #f8f9fa;
+    --dark-gray: #343a40;
+    --text-gray: #6c757d;
+    --border-radius: 12px;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+
+.book-now-button:hover {
+    background: #dc2f3d;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
+}
+
+.property-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.highlight-item {
+    text-align: center;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.highlight-label {
+    display: block;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.highlight-value {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2d3436;
+}
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.facility-card {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.facility-card:hover {
+    transform: translateY(-2px);
+    background: #e63946;
+    color: white;
+}
+
+.facility-icon {
+    color: #e63946;
+    font-weight: bold;
+}
+
+.facility-card:hover .facility-icon {
+    color: white;
+}
+
+.contact-details {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.contact-label {
+    color: #666;
+}
+
+.contact-value {
+    color: #2d3436;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.contact-value:hover {
+    color: #e63946;
+}
+
+@media (max-width: 768px) {
+    .pg-details-container {
+        padding: 1rem;
+    }
+
+    .pg-main-image {
+        height: 300px;
+    }
+
+    .price-amount {
+        font-size: 2rem;
+    }
+}
+
+:root {
+    --primary-red: #e63946;
+    --secondary-red: #d62c3a;
+    --white: #ffffff;
+    --light-gray: #f8f9fa;
+    --dark-gray: #343a40;
+    --text-gray: #6c757d;
+    --border-radius: 12px;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+
+
+.book-now-button:hover {
+    background: #dc2f3d;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
+}
+
+.property-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.highlight-item {
+    text-align: center;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.highlight-label {
+    display: block;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.highlight-value {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2d3436;
+}
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.facility-card {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.facility-card:hover {
+    transform: translateY(-2px);
+    background: #e63946;
+    color: white;
+}
+
+.facility-icon {
+    color: #e63946;
+    font-weight: bold;
+}
+
+.facility-card:hover .facility-icon {
+    color: white;
+}
+
+.contact-details {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.contact-label {
+    color: #666;
+}
+
+.contact-value {
+    color: #2d3436;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.contact-value:hover {
+    color: #e63946;
+}
+
+@media (max-width: 768px) {
+    .pg-details-container {
+        padding: 1rem;
+    }
+
+    .pg-main-image {
+        height: 300px;
+    }
+
+    .price-amount {
+        font-size: 2rem;
+    }
+}
+
+:root {
+    --primary-red: #e63946;
+    --secondary-red: #d62c3a;
+    --white: #ffffff;
+    --light-gray: #f8f9fa;
+    --dark-gray: #343a40;
+    --text-gray: #6c757d;
+    --border-radius: 12px;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+.book-now-button:hover {
+    background: #dc2f3d;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
+}
+
+.property-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.highlight-item {
+    text-align: center;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.highlight-label {
+    display: block;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.highlight-value {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2d3436;
+}
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.facility-card {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.facility-card:hover {
+    transform: translateY(-2px);
+    background: #e63946;
+    color: white;
+}
+
+.facility-icon {
+    color: #e63946;
+    font-weight: bold;
+}
+
+.facility-card:hover .facility-icon {
+    color: white;
+}
+
+.contact-details {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.contact-label {
+    color: #666;
+}
+
+.contact-value {
+    color: #2d3436;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.contact-value:hover {
+    color: #e63946;
+}
+
+@media (max-width: 768px) {
+    .pg-details-container {
+        padding: 1rem;
+    }
+
+    .pg-main-image {
+        height: 300px;
+    }
+
+    .price-amount {
+        font-size: 2rem;
+    }
+}
+
+:root {
+    --primary-red: #e63946;
+    --secondary-red: #d62c3a;
+    --white: #ffffff;
+    --light-gray: #f8f9fa;
+    --dark-gray: #343a40;
+    --text-gray: #6c757d;
+    --border-radius: 12px;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+
+.book-now-button:hover {
+    background: #dc2f3d;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
+}
+
+.property-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.highlight-item {
+    text-align: center;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.highlight-label {
+    display: block;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.highlight-value {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2d3436;
+}
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.facility-card {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.facility-card:hover {
+    transform: translateY(-2px);
+    background: #e63946;
+    color: white;
+}
+
+.facility-icon {
+    color: #e63946;
+    font-weight: bold;
+}
+
+.facility-card:hover .facility-icon {
+    color: white;
+}
+
+.contact-details {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.contact-label {
+    color: #666;
+}
+
+.contact-value {
+    color: #2d3436;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.contact-value:hover {
+    color: #e63946;
+}
+
+@media (max-width: 768px) {
+    .pg-details-container {
+        padding: 1rem;
+    }
+
+    .pg-main-image {
+        height: 300px;
+    }
+
+    .price-amount {
+        font-size: 2rem;
+    }
+}
+
+:root {
+    --primary-red: #e63946;
+    --secondary-red: #d62c3a;
+    --white: #ffffff;
+    --light-gray: #f8f9fa;
+    --dark-gray: #343a40;
+    --text-gray: #6c757d;
+    --border-radius: 12px;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+
+.book-now-button:hover {
+    background: #dc2f3d;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
+}
+
+.property-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.highlight-item {
+    text-align: center;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.highlight-label {
+    display: block;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.highlight-value {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2d3436;
+}
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.facility-card {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.facility-card:hover {
+    transform: translateY(-2px);
+    background: #e63946;
+    color: white;
+}
+
+.facility-icon {
+    color: #e63946;
+    font-weight: bold;
+}
+
+.facility-card:hover .facility-icon {
+    color: white;
+}
+
+.contact-details {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.contact-label {
+    color: #666;
+}
+
+.contact-value {
+    color: #2d3436;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.contact-value:hover {
+    color: #e63946;
+}
+
+@media (max-width: 768px) {
+    .pg-details-container {
+        padding: 1rem;
+    }
+
+    .pg-main-image {
+        height: 300px;
+    }
+
+    .price-amount {
+        font-size: 2rem;
+    }
+}
+
+
+
+    

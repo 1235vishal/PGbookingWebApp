@@ -1,0 +1,28 @@
+# Node.js
+node_modules/
+.env
+
+# Ignore .env files in backend and frontend
+backend/.env
+frontend/.env
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build folders
+build/
+dist/
+
+# IDE folders
+.vscode/
+.idea/
+
+
+# Ignore video files
+*.mp4
+backend/uploads/

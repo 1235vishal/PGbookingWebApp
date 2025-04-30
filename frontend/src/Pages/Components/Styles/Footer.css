@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.footer {
+  background-color: #FFFFFF;
+  font-family: 'Poppins', sans-serif;
+  padding: 40px 0 15px; /* Reduced padding */
+  border-top: 2px solid rgba(198, 19, 0, 0.1);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-top {
+  text-align: center;
+}
+
+.logo-container {
+  margin-bottom: 20px; /* Reduced margin */
+}
+
+.logo-container img {
+  max-width: 150px; /* Reduced logo size */
+  height: auto;
+}
+
+.footer-description {
+  color: #555;
+  margin-bottom: 30px; /* Reduced margin */
+  max-width: 700px; /* Reduced max-width */
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 14px; /* Smaller font size */
+  line-height: 1.6; /* Adjusted line height */
+  font-weight: 300;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px; /* Reduced gap */
+  margin: 25px 0; /* Reduced margin */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Reduced gap */
+  margin: 25px 0; /* Reduced margin */
+}
+
+.social-icons a {
+  width: 40px; /* Reduced size */
+  height: 40px; /* Reduced size */
+  font-size: 18px; /* Reduced font size */
+}
+
+/* Updated responsive styles */
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 30px 0 15px;
+  }
+
+  .footer-nav {
+    gap: 15px;
+  }
+
+  .footer-description {
+    font-size: 13px;
+    padding: 0 20px;
+    margin-bottom: 20px;
+  }
+
+  .social-icons a {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer {
+    padding: 25px 0 10px;
+  }
+
+  .logo-container img {
+    max-width: 120px;
+  }
+
+  .footer-description {
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+
+  .footer-nav {
+    gap: 12px;
+  }
+
+  .footer-nav a {
+    font-size: 14px;
+  }
+
+  .social-icons {
+    gap: 12px;
+    margin: 20px 0;
+  }
+
+  .social-icons a {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+}
+
+.footer-nav a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.footer-nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #C61300;
+  transition: width 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: #C61300;
+}
+
+.footer-nav a:hover::after {
+  width: 100%;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 40px 0;
+}
+
+.social-icons a {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #C61300;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid #C61300;
+  font-size: 20px;
+}
+
+.social-icons a:hover {
+  background-color: #C61300;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(198, 19, 0, 0.2);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(198, 19, 0, 0.1);
+  padding: 20px 0;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.heart-icon {
+  color: #C61300;
+  display: inline-block;
+  margin: 0 5px;
+  animation: heartbeat 1.5s ease infinite;
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 40px 0 20px;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .footer-description {
+    font-size: 14px;
+    padding: 0 15px;
+  }
+
+  .social-icons {
+    gap: 20px;
+  }
+
+  .social-icons a {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer-description {
+    font-size: 13px;
+  }
+
+  .footer-nav a {
+    font-size: 15px;
+  }
+
+  .social-icons {
+    gap: 15px;
+  }
+
+  .social-icons a {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+}

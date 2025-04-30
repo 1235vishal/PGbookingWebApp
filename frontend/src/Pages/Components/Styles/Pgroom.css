@@ -1,0 +1,279 @@
+/* Modern PG Rooms Design */
+.pg-rooms {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  padding: 60px 20px;
+  background-color: #ffffff; /* Pure white background */
+}
+
+.pg-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+  width: 100%;
+}
+
+/* Stylish Heading with Underline */
+.pg-heading-container {
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.pg-heading {
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #2d3142;
+  position: relative;
+  display: inline-block;
+}
+
+.pg-heading span {
+  color: #c61300;
+  font-weight: 700;
+}
+
+.pg-heading::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #c61300, #ff9e80);
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.pg-subheading {
+  font-size: 16px;
+  color: #666;
+  max-width: 600px;
+  margin: 20px auto 0;
+}
+
+/* Modern Card Grid with 3-column layout */
+.pg-house-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Default to 3 columns */
+  gap: 62px;
+  justify-items: center; /* Center each item in the grid */
+}
+
+/* Card Design with Hover Effects */
+.pg-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 112%;
+  border: none;
+  position: relative;
+}
+
+.pg-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.pg-image {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.pg-card:hover .pg-image {
+  transform: scale(1.05);
+}
+
+.pg-image-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.pg-type-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: rgba(198, 19, 0, 0.85);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.pg-info {
+  padding: 20px 25px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.pg-name {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #2d3142;
+  line-height: 1.4;
+}
+
+.pg-location {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.pg-location i {
+  color: #c61300;
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.pg-zone {
+  display: inline-block;
+  background-color: #f0f1f7;
+  color: #555;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.pg-details {
+  margin-top: 10px;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+.pg-amenities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.pg-amenity {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  color: #666;
+  background-color: #f8f9fa;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.pg-amenity i {
+  color: #c61300;
+  margin-right: 5px;
+  font-size: 14px;
+}
+
+.pg-price-btn {
+  padding: 0 25px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pg-price {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2d3142;
+}
+
+.pg-price span {
+  font-size: 14px;
+  color: #666;
+  font-weight: 400;
+}
+
+.pg-btn {
+  background: linear-gradient(to right, #c61300, #e75241);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.pg-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(198, 19, 0, 0.2);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .pg-house-grid {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(280px, 1fr)
+    ); /* 2 columns on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .pg-rooms {
+    padding: 40px 15px;
+  }
+
+  .pg-heading {
+    font-size: 30px;
+  }
+
+  .pg-subheading {
+    font-size: 14px;
+  }
+
+  .pg-house-grid {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(240px, 1fr)
+    ); /* Adjust to smaller columns */
+  }
+}
+
+@media (max-width: 576px) {
+  .pg-house-grid {
+    grid-template-columns: 1fr; /* Single column for small screens */
+    gap: 25px;
+  }
+
+  .pg-heading {
+    font-size: 26px;
+  }
+
+  .pg-card {
+    max-width: 100%;
+  }
+
+  .pg-price-btn {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .pg-btn {
+    width: 100%;
+  }
+}

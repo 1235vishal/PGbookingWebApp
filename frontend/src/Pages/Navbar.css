@@ -1,0 +1,376 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Top Header with Marquee */
+.shivtop-header {
+  background-color: #ff0000;
+  color: white;
+  padding: 8px 0;
+  overflow: hidden;
+  position: relative;
+  width: 100%; /* Ensure it doesn't overflow */
+}
+
+.shivmarquee-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.shivmarquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: shivmarquee 20s linear infinite;
+  padding-left: 100%;
+}
+
+@keyframes shivmarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Navigation Bar */
+.shivnavbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  position: relative;
+  z-index: 1001;
+  background-color: #fff;
+  height: 65px;
+  width: 100%; /* Ensure it doesn't overflow */
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+}
+
+.shivlogo {
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.shivlogo:hover {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.shivlogo img {
+  height: 90px; /* Increased logo size for better visibility */
+  width: auto; /* Maintain aspect ratio */
+}
+
+/* Centered navigation links */
+.shivnav-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.shivnav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 44px;
+}
+
+.shivnav-links a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.shivnav-links a:hover {
+  color: #ff0000; /* Red color */
+}
+
+.shivcta-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.shivbtn {
+  padding: 8px 20px;
+  margin-left: 10px;
+  border-radius: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.shivbtn-outline {
+  border: 2px solid #ff0000; /* Red color */
+  color: #ff0000; /* Red color */
+  background-color: #fff;
+}
+
+.shivbtn-outline:hover {
+  background-color: #ff0000; /* Red color */
+  color: #fff;
+}
+
+.shivbtn-dark {
+  background-color: #000;
+  color: #fff;
+  border: none;
+}
+
+/* Toggle Button */
+.shivtoggle-btn {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #333;
+}
+
+/* Sidebar */
+.shivsidebar {
+  position: fixed;
+  top: calc(
+    36px + 15px + 90px
+  ); /* Top header height + navbar padding + logo height */
+  left: -100%; /* Start off-screen to the left */
+  width: 100%; /* Full width */
+  height: 90%;
+  background-color: #fff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: left 0.3s ease;
+  z-index: 1000;
+  padding: 20px;
+  overflow-y: auto;
+  border-radius: 0 0 10px 10px; /* Rounded corners at bottom */
+}
+
+.shivsidebar.active {
+  left: 0; /* Move to visible area */
+  top: 98px;
+}
+
+.shivsidebar-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.shivsidebar-links a {
+  padding: 12px 0;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  border-bottom: 1px solid #eee;
+  transition: color 0.3s ease;
+}
+
+.shivsidebar-links a:hover {
+  color: #ff0000; /* Red color */
+}
+
+.shivsidebar-buttons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  padding-bottom: 10px;
+}
+
+.shivsidebar-buttons .shivbtn {
+  margin: 10px 0;
+  text-align: center;
+}
+/* ... existing code ... */
+
+.shivnav-links a {
+  text-decoration: none;
+  color: #333;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.shivnav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: red;
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+.shivnav-links a:hover::after {
+  width: 100%;
+}
+
+/* ... existing code ... */
+/* Overlay */
+.shivoverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
+}
+
+.shivoverlay.active {
+  display: block;
+}
+
+/* User Sidebar Styling - NEW IMPROVED VERSION */
+.shivsidebar-user {
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+.shivsidebar-user-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.shivsidebar-user-header {
+  background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+}
+
+.shivsidebar-user-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.shivsidebar-user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.shivsidebar-user-name {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.shivsidebar-user-role {
+  font-size: 14px;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+.shivsidebar-user-links {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.shivsidebar-user-link {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  text-decoration: none;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.shivsidebar-user-link:hover {
+  background-color: #fff0f0;
+  color: #ff0000;
+  padding-left: 20px;
+}
+
+.shivsidebar-user-link i {
+  margin-right: 10px;
+  font-size: 16px;
+  width: 20px;
+  text-align: center;
+}
+
+.shivsidebar-logout-btn {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  margin-top: 10px;
+  background-color: #fff;
+  color: #ff0000;
+  border: 1px solid #ff0000;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.shivsidebar-logout-btn:hover {
+  background-color: #ff0000;
+  color: #fff;
+}
+
+.shivsidebar-logout-btn i {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .shivnavbar {
+    padding: 15px 20px;
+  }
+
+  .shivnav-container,
+  .shivcta-buttons {
+    display: none;
+  }
+
+  .shivtoggle-btn {
+    display: block;
+  }
+
+  .shivlogo img {
+    height: 69px;
+    margin-left: -27px;
+  }
+
+  .shivsidebar {
+    top: calc(36px + 15px + 60px); /* Adjusted for smaller logo on mobile */
+  }
+
+  .shivsidebar-user-header {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .shivsidebar-user-img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+}

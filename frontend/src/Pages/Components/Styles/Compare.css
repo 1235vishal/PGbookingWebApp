@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+.image-container {
+        background-color: #FFFFFF;
+
+  width: 100%;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+.responsive-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 100%;
+}
+
+/* Media queries for different screen sizes */
+@media (max-width: 768px) {
+  .image-container {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-container {
+    margin: 10px auto;
+  }
+}

@@ -1,0 +1,99 @@
+.rent-card {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.rent-info-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+}
+
+.info-label {
+    font-size: 0.875rem;
+    color: #6c757d;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.info-value {
+    font-size: 1rem;
+    color: #212529;
+    word-break: break-word;
+}
+
+.status-badge {
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.status-badge.pending {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.status-badge.paid {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status-badge.overdue {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.rent-cards-container {
+    padding: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0.5rem;
+    }
+    
+    .rent-card {
+        margin: 0.75rem 0;
+    }
+
+    .info-item {
+        transition: background-color 0.2s;
+    }
+
+    .info-item:active {
+        background-color: #e9ecef;
+    }
+
+    .info-value {
+        line-height: 1.4;
+    }
+
+    /* Make the Pay Now button more touch-friendly */
+    .btn-success {
+        padding: 0.75rem;
+        font-size: 1.1rem;
+        margin-top: 1rem;
+    }
+
+    /* Improve spacing in card body */
+    .card-body {
+        padding: 1rem;
+    }
+
+    /* Better text wrapping for long content */
+    .text-break {
+        word-break: break-word;
+        hyphens: auto;
+    }
+}
