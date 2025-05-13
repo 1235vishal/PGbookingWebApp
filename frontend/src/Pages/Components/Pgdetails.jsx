@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { API_URL, SERVER_URL } from '../../config';
+import { API_URL } from '../../config';
 import './Styles/Pgdetail.css';
 
 const Pgdetails = () => {
@@ -113,9 +113,9 @@ const Pgdetails = () => {
             <div className="pg-content-grid">
                 <div className="main-content">
                     <div className="image-gallery-section">
-                        <div className="main-image" onClick={() => handleImageClick(pgData.main_image ? `${SERVER_URL}/uploads/pg/${pgData.main_image}` : "https://via.placeholder.com/800x600")}>
+                        <div className="main-image" onClick={() => handleImageClick(pgData.main_image ? `${API_URL}/uploads/pg/${pgData.main_image}` : "https://via.placeholder.com/800x600")}>
                             <img 
-                                src={pgData.main_image ? `${SERVER_URL}/uploads/pg/${pgData.main_image}` : "https://via.placeholder.com/800x600"}
+                                src={pgData.main_image ? `${API_URL}/uploads/pg/${pgData.main_image}` : "https://via.placeholder.com/800x600"}
                                 alt={pgData.pg_name}
                                 onError={(e) => {
                                     e.target.onerror = null;
@@ -130,10 +130,10 @@ const Pgdetails = () => {
                                     <div 
                                         className="thumbnail" 
                                         key={index}
-                                        onClick={() => handleImageClick(`${SERVER_URL}/uploads/pg/${img}`)}
+                                        onClick={() => handleImageClick(`${API_URL}/uploads/pg/${img}`)}
                                     >
                                         <img 
-                                            src={`${SERVER_URL}/uploads/pg/${img}`}
+                                            src={`${API_URL}/uploads/pg/${img}`}
                                             alt={`View ${index + 1}`}
                                             onError={(e) => {
                                                 e.target.onerror = null;
@@ -200,8 +200,8 @@ const Pgdetails = () => {
                                 <div className="video-container">
                                     <video 
                                         controls
-                                        src={`${SERVER_URL}/uploads/pg/${pgData.video_url}`}
-                                        poster={pgData.main_image ? `${SERVER_URL}/uploads/pg/${pgData.main_image}` : null}
+                                        src={`${API_URL}/uploads/pg/${pgData.video_url}`}
+                                        poster={pgData.main_image ? `${API_URL}/uploads/pg/${pgData.main_image}` : null}
                                     >
                                         Your browser does not support the video tag.
                                     </video>

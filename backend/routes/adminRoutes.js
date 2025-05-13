@@ -32,13 +32,22 @@ router.post('/login', (req, res) => {
 });
 
 // Configure nodemailer
+// const transporter = nodemailer.createTransport({
+//     service: process.env.EMAIL_SERVICE,
+//     auth: {
+//         user: process.env.EMAIL_USER,
+//         pass: process.env.EMAIL_APP_PASSWORD
+//     }
+// });
+// Configure nodemailer with Sendmail
 const transporter = nodemailer.createTransport({
-    service: process.env.EMAIL_SERVICE,
-    auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_APP_PASSWORD
-    }
+    sendmail: true,
+    newline: 'unix',
+    path: '/usr/sbin/sendmail', // Default path for sendmail on cPanel
+    logger: true,
+    debug: true
 });
+
 
 router.post('/forgot-password', async (req, res) => {
     const { email } = req.body;
@@ -70,7 +79,7 @@ router.post('/forgot-password', async (req, res) => {
                 // Send reset password email
                 const resetLink = `${process.env.FRONTEND_URL}/admin/reset-password/${resetToken}`;
                 const mailOptions = {
-                    from: process.env.EMAIL_USER,
+                    from: 'rajputsighvishal@gmail.com',
                     to: email,
                     subject: 'Password Reset Request',
                     html: `

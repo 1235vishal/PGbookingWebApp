@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import { API_URL, SERVER_URL } from '../config';
+import { API_URL } from '../config';
 import './PgBooking.css';
 
 const PgBooking = () => {
@@ -114,7 +114,7 @@ const handleSubmit = async (e) => {
                         <div className="col-md-4">
                             <div className="position-relative overflow-hidden">
                                 <img
-                                    src={`${SERVER_URL}/uploads/pg/${pgData.main_image}`}
+                                    src={`${API_URL}/uploads/pg/${pgData.main_image}`}
                                     alt="Main PG Image"
                                     className="gallery-img"
                                 />
@@ -125,7 +125,7 @@ const handleSubmit = async (e) => {
                         <div className="col-md-4" key={index}>
                             <div className="position-relative overflow-hidden">
                                 <img
-                                    src={`${SERVER_URL}/uploads/pg/${img}`}
+                                    src={`${API_URL}/uploads/pg/${img}`}
                                     alt={`Secondary Image ${index + 1}`}
                                     className="gallery-img"
                                 />

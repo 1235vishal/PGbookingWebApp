@@ -773,7 +773,7 @@ import { Buffer } from 'buffer';
 import React, { useEffect, useState } from 'react';
 import { Button } from 'react-bootstrap';
 import { useNavigate, useParams } from 'react-router-dom';
-import { API_URL, SERVER_URL } from '../config';
+import { API_URL } from '../config';
 import './BookingUser.css';
 
 // Initialize Buffer for PDF generation
@@ -1019,21 +1019,21 @@ const TenantPDF = ({ tenant }) => (
                         <Text style={styles.documentTitle}>ID Proof (Front)</Text>
                         <Image
                             style={styles.documentImage}
-                            src={`${SERVER_URL}/${tenant.id_proof_front}`}
+                            src={`${API_URL}/${tenant.id_proof_front}`}
                         />
                     </View>
                     <View style={styles.documentCard}>
                         <Text style={styles.documentTitle}>ID Proof (Back)</Text>
                         <Image
                             style={styles.documentImage}
-                            src={`${SERVER_URL}/${tenant.id_proof_back}`}
+                            src={`${API_URL}/${tenant.id_proof_back}`}
                         />
                     </View>
                     <View style={styles.documentCard}>
                         <Text style={styles.documentTitle}>User Photo</Text>
                         <Image
                             style={styles.documentImage}
-                            src={`${SERVER_URL}/${tenant.user_image}`}
+                            src={`${API_URL}/${tenant.user_image}`}
                         />
                     </View>
                 </View>
@@ -1314,9 +1314,9 @@ const TenantDetails = () => {
                                 <h4>ID Proof (Front)</h4>
                                 <div className="document-image-container">
                                     <img 
-                                        src={`${SERVER_URL}/${tenant.id_proof_front}`} 
+                                        src={`${API_URL}/${tenant.id_proof_front}`} 
                                         alt="ID Front" 
-                                        onClick={() => window.open(`${SERVER_URL}/${tenant.id_proof_front}`, '_blank')}
+                                        onClick={() => window.open(`${API_URL}/${tenant.id_proof_front}`, '_blank')}
                                     />
                                     <div className="image-overlay">
                                         <span>Click to view</span>
@@ -1327,9 +1327,9 @@ const TenantDetails = () => {
                                 <h4>ID Proof (Back)</h4>
                                 <div className="document-image-container">
                                     <img 
-                                        src={`${SERVER_URL}/${tenant.id_proof_back}`} 
+                                        src={`${API_URL}/${tenant.id_proof_back}`} 
                                         alt="ID Back" 
-                                        onClick={() => window.open(`${SERVER_URL}/${tenant.id_proof_back}`, '_blank')}
+                                        onClick={() => window.open(`${API_URL}/${tenant.id_proof_back}`, '_blank')}
                                     />
                                     <div className="image-overlay">
                                         <span>Click to view</span>
@@ -1340,9 +1340,9 @@ const TenantDetails = () => {
                                 <h4>User Photo</h4>
                                 <div className="document-image-container">
                                     <img 
-                                        src={`${SERVER_URL}/${tenant.user_image}`} 
+                                        src={`${API_URL}/${tenant.user_image}`} 
                                         alt="User Photo" 
-                                        onClick={() => window.open(`${SERVER_URL}/${tenant.user_image}`, '_blank')}
+                                        onClick={() => window.open(`${API_URL}/${tenant.user_image}`, '_blank')}
                                     />
                                     <div className="image-overlay">
                                         <span>Click to view</span>

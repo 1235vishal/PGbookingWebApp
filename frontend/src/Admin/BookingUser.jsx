@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { API_URL, SERVER_URL } from '../config';
+import { API_URL } from '../config';
 import './BookingUser.css';
 
 const BookingUser = () => {
@@ -132,9 +132,9 @@ const BookingUser = () => {
                                     </td>
                                     <td>
                                         <div className="document-links">
-                                            <a href={`${SERVER_URL}/${booking.id_proof_front}`} target="_blank" rel="noopener noreferrer">ID Front</a>
-                                            <a href={`${SERVER_URL}/${booking.id_proof_back}`} target="_blank" rel="noopener noreferrer">ID Back</a>
-                                            <a href={`${SERVER_URL}/${booking.user_image}`} target="_blank" rel="noopener noreferrer">Photo</a>
+                                            <a href={`${API_URL}/${booking.id_proof_front}`} target="_blank" rel="noopener noreferrer">ID Front</a>
+                                            <a href={`${API_URL}/${booking.id_proof_back}`} target="_blank" rel="noopener noreferrer">ID Back</a>
+                                            <a href={`${API_URL}/${booking.user_image}`} target="_blank" rel="noopener noreferrer">Photo</a>
                                         </div>
                                     </td>
                                     <td>

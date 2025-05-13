@@ -3,7 +3,7 @@
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useEffect, useState } from 'react';
-import { API_URL, SERVER_URL } from '../config';
+import { API_URL } from '../config';
 
 const UserProfile = () => {
   const userId = 1; // Replace with dynamic ID if needed
@@ -33,7 +33,7 @@ const UserProfile = () => {
           profileImage: null,
           newPassword: '',
         });
-        setPreviewImage(`${SERVER_URL}/${u.profileImage}`);
+        setPreviewImage(`${API_URL}/${u.profileImage}`);
       })
       .catch((err) => console.error(err));
   }, [userId]);
@@ -105,7 +105,7 @@ const UserProfile = () => {
                 <div className="text-center mb-4">
                   {user.profileImage ? (
                     <img
-                      src={`${SERVER_URL}/${user.profileImage}`}
+                      src={`${API_URL}/${user.profileImage}`}
                       alt="Profile"
                       className="rounded-circle mb-3"
                       style={{ width: '150px', height: '150px', objectFit: 'cover' }}

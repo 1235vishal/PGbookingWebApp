@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { FaFan, FaMapMarkerAlt, FaUtensils, FaWifi } from 'react-icons/fa';
 import { Link, useLocation } from 'react-router-dom';
-import { API_URL, SERVER_URL } from '../../config';
+import { API_URL } from '../../config';
 import Footer from '../Components/Footer';
 import PgMap from '../Components/PgMaplisting';
 import Searchbar from '../Components/Searchbar';
@@ -85,7 +85,7 @@ const PgListings = () => {
                                         <div className="pglisting-image-container">
                                             <img
                                                 src={pg.main_image
-                                                    ? `${SERVER_URL}/uploads/pg/${pg.main_image}`
+                                                    ? `${API_URL}/uploads/pg/${pg.main_image}`
                                                     : "https://via.placeholder.com/400x320"
                                                 }
                                                 alt={pg.pg_name}

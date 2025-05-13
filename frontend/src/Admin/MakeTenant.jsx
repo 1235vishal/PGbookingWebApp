@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { API_URL, SERVER_URL } from '../config';
+import { API_URL } from '../config';
 import './MakeTenant.css';
 
 const MakeTenant = () => {
@@ -245,9 +245,9 @@ const MakeTenant = () => {
                     <div className="mb-3">
                         <h4>Uploaded Documents</h4>
                         <div className="document-links">
-                            <a href={`${SERVER_URL}/${bookingData.id_proof_front}`} target="_blank" rel="noopener noreferrer">ID Proof Front</a>
-                            <a href={`${SERVER_URL}/${bookingData.id_proof_back}`} target="_blank" rel="noopener noreferrer">ID Proof Back</a>
-                            <a href={`${SERVER_URL}/${bookingData.user_image}`} target="_blank" rel="noopener noreferrer">User Image</a>
+                            <a href={`${API_URL}/${bookingData.id_proof_front}`} target="_blank" rel="noopener noreferrer">ID Proof Front</a>
+                            <a href={`${API_URL}/${bookingData.id_proof_back}`} target="_blank" rel="noopener noreferrer">ID Proof Back</a>
+                            <a href={`${API_URL}/${bookingData.user_image}`} target="_blank" rel="noopener noreferrer">User Image</a>
                         </div>
                     </div>
 

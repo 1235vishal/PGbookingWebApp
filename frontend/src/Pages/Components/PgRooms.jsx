@@ -9,7 +9,7 @@ import {
     FaWifi,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { API_URL, SERVER_URL } from '../../config';
+import { API_URL } from '../../config';
 import "./Styles/Pgroom.css";
 
 const PgRooms = () => {
@@ -45,7 +45,7 @@ const PgRooms = () => {
                   <img
                     src={
                       pg.main_image
-                        ? `${SERVER_URL}/uploads/pg/${pg.main_image}`
+                        ? `${API_URL}/uploads/pg/${pg.main_image}`
                         : "https://via.placeholder.com/400x320"
                     }
                     alt={pg.pg_name}

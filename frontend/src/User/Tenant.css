@@ -1,0 +1,74 @@
+/* Tenant.css */
+.tenant-container {
+  max-width: 1200px;
+}
+
+.tenant-card {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tenant-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  color: #2c3e50;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.section-divider {
+  border-top: 2px solid #3498db;
+  opacity: 0.5;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.tenant-detail {
+  margin-bottom: 1rem;
+  display: flex;
+}
+
+.detail-label {
+  font-weight: 600;
+  min-width: 120px;
+  color: #2c3e50;
+}
+
+.detail-value {
+  color: #34495e;
+}
+
+.document-buttons {
+  margin-top: 1rem;
+}
+
+.document-button {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .tenant-detail {
+    flex-direction: column;
+  }
+
+  .detail-label {
+    margin-bottom: 0.25rem;
+  }
+
+  .document-buttons {
+    flex-direction: column;
+    gap: 0.75rem !important;
+  }
+
+  .document-button {
+    width: 100%;
+    justify-content: center;
+  }
+}

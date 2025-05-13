@@ -29,11 +29,12 @@ app.use(cors({
 // app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use('/uploads', express.static('uploads')); // For serving media
-app.use('/uploads/pg', express.static('uploads/pg'));
-app.use('"/api/uploads', express.static('uploads')); // For serving media
-app.use('"/api/uploads/pg', express.static('uploads/pg'));
 
+
+
+// Add these lines to your Express server:
+app.use('/api/uploads', express.static('uploads'));
+app.use('/api/uploads/pg', express.static('uploads/pg'));
 
 app.use('/api/tenants', tenantRoutes);
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { API_URL, SERVER_URL } from '../config';
+import {API_URL} from '../config';
 import './BookingUser.css';
 
 const TenantTable = () => {
@@ -97,9 +97,9 @@ const TenantTable = () => {
                                     <td>{new Date(tenant.check_in_date).toLocaleDateString()}</td>
                                     <td>
                                         <div className="document-links">
-                                            <a href={`${SERVER_URL}/${tenant.id_proof_front}`} target="_blank" rel="noopener noreferrer">ID Front</a>
-                                            <a href={`${SERVER_URL}/${tenant.id_proof_back}`} target="_blank" rel="noopener noreferrer">ID Back</a>
-                                            <a href={`${SERVER_URL}/${tenant.user_image}`} target="_blank" rel="noopener noreferrer">Photo</a>
+                                            <a href={`${API_URL}/${tenant.id_proof_front}`} target="_blank" rel="noopener noreferrer">ID Front</a>
+                                            <a href={`${API_URL}/${tenant.id_proof_back}`} target="_blank" rel="noopener noreferrer">ID Back</a>
+                                            <a href={`${API_URL}/${tenant.user_image}`} target="_blank" rel="noopener noreferrer">Photo</a>
                                         </div>
                                     </td>
                                     <td>

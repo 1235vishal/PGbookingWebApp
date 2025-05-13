@@ -3,7 +3,7 @@ import 'leaflet/dist/leaflet.css';
 import React, { useEffect } from 'react';
 import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet';
 import { useNavigate } from 'react-router-dom';
-import { SERVER_URL } from '../../config';
+import { API_URL } from '../../config';
 import './Styles/PgMaplisting.css';
 
 // Fix for default marker icons
@@ -74,7 +74,7 @@ const PgMap = ({ pgData }) => {
                                     <div className="map-card">
                                         <div className="map-card-image">
                                             <img
-                                                src={`${SERVER_URL}/uploads/pg/${pg.main_image}`}
+                                                src={`${API_URL}/uploads/pg/${pg.main_image}`}
                                                 alt={pg.pg_name}
                                             />
                                         </div>

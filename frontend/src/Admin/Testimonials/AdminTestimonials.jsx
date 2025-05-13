@@ -1,6 +1,6 @@
 // import React, { useEffect, useState } from 'react';
 // import { Alert, Button, Form, Modal, Table } from 'react-bootstrap';
-// import { API_URL, SERVER_URL } from '../../config';
+// import API_URL from '../../config';
 
 // const AdminTestimonials = () => {
 //     const [testimonials, setTestimonials] = useState([]);
@@ -151,7 +151,7 @@
 //                             <td>
 //                                 {testimonial.image && (
 //                                     <img 
-//                                         src={`${SERVER_URL}${testimonial.image}`}
+//                                         src={`${API_URL}${testimonial.image}`}
 //                                         alt={testimonial.name}
 //                                         style={{ width: '50px', height: '50px', objectFit: 'cover' }}
 //                                     />
@@ -172,7 +172,7 @@
 //             <td>
 //                 {testimonial.image && (
 //                     <img 
-//                         src={`${SERVER_URL}${testimonial.image}`}
+//                         src={`${API_URL}${testimonial.image}`}
 //                         alt={testimonial.name}
 //                         style={{ width: '50px', height: '50px', objectFit: 'cover' }}
 //                     />
@@ -252,7 +252,7 @@
 // export default AdminTestimonials;
 import React, { useEffect, useState } from 'react';
 import { Alert, Button, Form, Modal, Table } from 'react-bootstrap';
-import { API_URL, SERVER_URL } from '../../config';
+import { API_URL } from '../../config';
 
 const AdminTestimonials = () => {
     const [testimonials, setTestimonials] = useState([]);
@@ -387,7 +387,7 @@ const AdminTestimonials = () => {
                             <td>
                                 {testimonial.image && (
                                     <img 
-                                        src={`${SERVER_URL}${testimonial.image}`}
+                                        src={`${API_URL}${testimonial.image}`}
                                         alt={testimonial.name}
                                         style={{ width: '50px', height: '50px', objectFit: 'cover' }}
                                     />

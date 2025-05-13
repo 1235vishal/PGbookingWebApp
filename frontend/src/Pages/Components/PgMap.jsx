@@ -8,7 +8,7 @@ import './Styles/PgMap.css';
 import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png';
 import markerIcon from 'leaflet/dist/images/marker-icon.png';
 import markerShadow from 'leaflet/dist/images/marker-shadow.png';
-import { SERVER_URL } from '../../config';
+import { API_URL } from '../../config';
 
 
 
@@ -82,7 +82,7 @@ const PgMap = ({ pgData }) => {
                                 <Popup>
                                     <div className="pg-popup-card">
                                         <img
-                                            src={`${SERVER_URL}/uploads/pg/${pg.main_image}`}
+                                            src={`${API_URL}/uploads/pg/${pg.main_image}`}
                                             alt={pg.pg_name}
                                             className="popup-image"
                                         />

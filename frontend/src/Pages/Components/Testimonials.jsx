@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { API_URL, SERVER_URL } from '../../config';
+import { API_URL } from '../../config';
 import './Testimonials.css';
 
 const Testimonials = () => {
@@ -64,7 +64,7 @@ const Testimonials = () => {
                 <div className="testimonial-card">
                     <div className="testimonial-image">
                         <img 
-                            src={`${SERVER_URL}${testimonials[currentIndex]?.image}`} 
+                            src={`${API_URL}${testimonials[currentIndex]?.image}`} 
                             alt={testimonials[currentIndex]?.name} 
                         />
                     </div>

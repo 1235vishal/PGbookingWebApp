@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { API_URL, SERVER_URL } from '../config';
+import { API_URL } from '../config';
 import './BookingHistory.css';
 
 const BookingHistory = () => {
@@ -39,7 +39,7 @@ const BookingHistory = () => {
                         <div key={booking.id} className="booking-card">
                             <div className="booking-image">
                                 <img 
-                                    src={`${SERVER_URL}/uploads/pg/${booking.pg_image}`} 
+                                    src={`${API_URL}/uploads/pg/${booking.pg_image}`} 
                                     alt={booking.pg_name} 
                                 />
                             </div>
